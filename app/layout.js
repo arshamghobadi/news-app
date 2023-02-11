@@ -1,5 +1,6 @@
 import './globals.css';
 import Header from './Header';
+import NavLinks from './NavLinks';
 
 export default function RootLayout({ children }) {
   return (
@@ -11,7 +12,7 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <Header />
-
+        <NavLinks />
         {children}
       </body>
     </html>
