@@ -1,7 +1,6 @@
-import { Inter } from '@next/font/google';
+import { categories } from '@/components/constants';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export default function Home() {
+export default async function Home() {
+  // const news = await fetchNews(categories.join(','));
   return <div>heloo</div>;
 }

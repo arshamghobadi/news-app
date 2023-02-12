@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
 import { HiBars3 } from 'react-icons/hi2';
+import NavLinks from './NavLinks';
+import SearchBox from './SearchBox';
 function Header() {
   return (
     <header>
@@ -23,6 +25,8 @@ function Header() {
           </button>
         </div>
       </div>
+      <NavLinks />
+      <SearchBox />
     </header>
   );
 }

@@ -10,10 +10,9 @@ export default function RootLayout({ children }) {
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className=" bg-gray-200 dark:bg-zinc-900 transition-all duration-700">
         <Header />
-        <NavLinks />
-        {children}
+        <div className="max-w-6xl mx-auto">{children}</div>
       </body>
     </html>
   );
