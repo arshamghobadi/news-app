@@ -9,7 +9,7 @@ function ReadMoreButton({ article }) {
       .map(([key, value]) => `${key}=${value}`)
       .join('&');
     const url = `/article?${queryString}`;
-    console.log(url);
+
     router.push(url);
   };
   return (
