@@ -1,6 +1,9 @@
 import { categories } from '@/components/constants';
+import fetchNews from '@/util/fetchNews';
 
-export default async function Home() {
-  // const news = await fetchNews(categories.join(','));
-  return <div>heloo</div>;
+async function Home() {
+  const news = await fetchNews(categories.join(','));
+  console.log(news);
+  return <div>{/* {newslist} */}</div>;
 }
+export default Home;
