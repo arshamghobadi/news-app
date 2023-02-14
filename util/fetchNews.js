@@ -2,8 +2,13 @@ import { gql } from 'graphql-request';
 import sortNewsNyImage from './sortNewsNyLmage';
 const fetchNews = async (category, isDynamic, keywords) => {
   const query = gql`
-    query myQuery {
-      myQuery(access_key: "7ee0f7cb089685d59e4aa7af247ffa7f", countries: "gb") {
+    query myQuery($access_key: String!, $keywords: String) {
+      myQuery(
+        access_key: $access_key
+        categories: "general"
+        countries: "gb"
+        keywords: $keywords
+      ) {
         data {
           author
           category
@@ -38,10 +43,11 @@ const fetchNews = async (category, isDynamic, keywords) => {
       },
       body: JSON.stringify({
         query,
-        // variables: {
-        //   access_key: process.env.MEDIASTACK_API_KEY,
-        //   categories: category,
-        // },
+        variables: {
+          access_key: process.env.MEDIASTACK_API_KEY,
+          categories: category,
+          keywords: keywords,
+        },
       }),
     }
   );
@@ -53,4 +59,4 @@ const fetchNews = async (category, isDynamic, keywords) => {
 
 export default fetchNews;
 
-// stepzen import curl "http://api.mediastack.com/v1/news?access_key=7ee0f7cb089685d59e4aa7af247ffa7f&search=abc&categories=business,sports&limit=100"
+//

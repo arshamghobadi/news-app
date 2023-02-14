@@ -12,7 +12,7 @@ function ArticlePage({ searchParams }) {
   }
 
   const article = searchParams;
-  console.log(article);
+
   return (
     <article>
       <section className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10">
