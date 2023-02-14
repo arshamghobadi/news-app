@@ -1,11 +1,12 @@
-import fetchNews from '@/util/fetchNews';
+import fetchNews from '../../util/fetchNews';
 import NewsList from '../NewsList';
 
 async function Searchpage({ searchParams }) {
-  const news = await fetchNews(true);
+  const news = await fetchNews('general', true, searchParams?.term);
+  console.log(searchParams);
   return (
     <div>
-      <h1 className="headerTitle">Search Results for: {searchParams}</h1>
+      <h1 className="headerTitle">Search Results for: {searchParams?.term}</h1>
       <NewsList news={news} />
     </div>
   );
