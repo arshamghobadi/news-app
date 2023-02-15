@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import LiveTimestamp from './LiveTimestamp';
 import ReadMoreButton from './ReadMoreButton';
 function Article({ article }) {
   return (

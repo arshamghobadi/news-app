@@ -3,7 +3,7 @@ import NewsList from '../NewsList';
 
 async function Searchpage({ searchParams }) {
   const news = await fetchNews('general', true, searchParams?.term);
-  console.log(searchParams);
+
   return (
     <div>
       <h1 className="headerTitle">Search Results for: {searchParams?.term}</h1>
